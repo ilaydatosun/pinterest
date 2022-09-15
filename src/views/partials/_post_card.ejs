@@ -1,0 +1,49 @@
+<% const date=new Date(post.timeCreated) 
+const diff=new Date()-date 
+const day=Math.floor(diff/1000/60/60/24) %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <body>
+
+        <div class="item">
+            <div class="item level-<%- post.index%>">
+                <div class="card-body ">
+
+                    <a href="/blog/<%=post._id%> " >
+                        <div class="images">
+                            <img src="/uploads/images/<%- post.img%>" >
+
+                            <h5 class="card-title">
+                                <%- post.title %>
+                            </h5>
+                            <p class="card-text"><small class="text-muted">Last updated <%- day%> day ago</small></p>
+                        </div>
+
+                    </a>
+                   
+                </div>
+                
+
+            </div>
+        </div>
+        <div class="more position-relative" style="cursor: pointer;">
+                                <i class="material-icons p-2">more_vert</i>
+                               
+                                <div class="d-none options card rounded-pill shadow-sm p-1 position-absolute">
+                                    <a href="pin/edit/<%= post._id %> " class="rounded-circle p-2 mb-2"
+                                        style="background:rgb(213, 213, 224);">
+                                        <i class="material-icons" style="color:white">create</i>
+                                    </a>
+                                    <form action="pin/delete/<%= post._id%> " method="POST">
+                                        <button class="rounded-circle p-2 bg-dark">
+                                            <i class="material-icons" style="color:white">delete</i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+        <script src="js/pin.js"></script>
+    </body>

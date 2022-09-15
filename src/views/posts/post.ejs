@@ -1,0 +1,40 @@
+<% if (!user) { %>
+<%- include('../partials/_header')  %> 
+<% } else { %>
+<%- include('../partials/_loginHeader')  %> 
+<% } %>
+<% const date=new Date(post.timeCreated)
+const diff=new Date()-date
+const day= Math.floor(diff/1000/60/60/24)
+%>
+    <div class="offset-md-3">
+        <div class="">
+            <div class="">
+                <div class="item-level-<%- post.index%> ">
+                    <%- include('../partials/_post_details',{post,}) %>
+
+                        <div class="post-detail">
+                            <div class="card-title"> <%- post.title %></div>
+                            <div class="card-body text-secondary">
+                                <h5 class="card-userName"><%- post.userName %></h5>
+                                <p class="card-text">Last updated <%- day%> day ago</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+      <% posts.forEach((post, index, id) => { %>
+        <% post.index=index+1 %>
+            <div class="item-level-<%- post.index%> " >
+                <%- include('../partials/_post_card',{post, index}) %>
+            </div>
+            <% }) %>  
+    </div>
+  
+    
+    
+    

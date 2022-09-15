@@ -1,0 +1,52 @@
+.container {
+    column-width: 289px;
+    column-gap: 45px;
+    margin: 20px auto;
+    column-count: 4;
+    column-fill: balance;
+}
+
+
+.images {
+    display: inline-block;
+}
+
+
+
+.item {
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 20rem;
+}
+
+.card-title {
+    color: black;
+}
+
+.item:hover {
+    opacity: 0.9;
+}
+
+#pinterest {
+    color: red;
+    font-size: 25px;
+}
+
+.footer {
+    column-width: 321px;
+    column-gap: 2px;
+    margin: 20px auto;
+    column-count: 12;
+    column-fill: balance;
+}
+
+#searchbox {
+    width: 700px;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+body {
+    background: #eeeeee !important;
+  }
+  .card-img {
+    background: url('/images/mosque.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+  }
+  .container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.2rem;
+  }

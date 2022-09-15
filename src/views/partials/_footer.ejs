@@ -1,0 +1,21 @@
+<% const date=new Date(post.createdAt) 
+const diff=new Date()-date 
+const day=Math.floor(diff/1000/60/60/24) %>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top m-3">
+    <div class="item">
+        <div class="item level-<%- post.index%>">
+            <div class="card-body">
+                <a href="/blog/<%=post._id%> ">
+                    <div class="images">
+                        <img src="<%- post.photoURL%>">
+                        <h5 class="card-title">
+                            <%- post.title %>
+                        </h5>
+                        <p class="card-text"><small class="text-muted">Last updated <%- day%> day ago</small></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
